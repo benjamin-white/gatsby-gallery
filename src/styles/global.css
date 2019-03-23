@@ -1,0 +1,35 @@
+/*
+
+  needs global paddings, margin, type sizes, typefaces, etc...
+
+  * box-sizing: border-box
+
+*/
+
+:root {
+  --drop-shadow: 1px 1px 9px 1px rgba(0, 0, 0, 0.2), 2px 2px 20px 0px rgba(0, 0, 0, 0.1);
+  --gutter-width: 24px;
+}
+
+figure {
+  margin: 0;
+  padding: 0 12px 24px;
+}
+
+figure > .inner {
+  border: 1px solid;
+  position: relative;
+}
+
+.u-fillLink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+}
+
+.card-grid {
+  display: flex;
+}

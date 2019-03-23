@@ -1,0 +1,15 @@
+.site-header {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.u-inner {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 24px;
+}
