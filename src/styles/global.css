@@ -1,24 +1,19 @@
-/*
-
-  needs global paddings, margin, type sizes, typefaces, etc...
-
-  * box-sizing: border-box
-
-*/
+* {
+  box-sizing: border-box;
+}
 
 :root {
   --drop-shadow: 1px 1px 9px 1px rgba(0, 0, 0, 0.2), 2px 2px 20px 0px rgba(0, 0, 0, 0.1);
-  --gutter-width: 24px;
 }
 
 figure {
   margin: 0;
-  padding: 0 12px 24px;
 }
 
-figure > .inner {
-  border: 1px solid;
-  position: relative;
+a {
+  color: var(--color-font);
+  text-decoration: none;
+  transition: color 0.3s ease-in
 }
 
 .u-fillLink {
@@ -30,6 +25,37 @@ figure > .inner {
   display: block;
 }
 
-.card-grid {
-  display: flex;
+.u-faded {
+  opacity: 0;
 }
+
+.u-borderUnderline {
+  cursor: pointer;
+  position: relative;
+}
+
+.u-borderUnderline:after {
+  content: "";
+  position: absolute;
+  left: -2%;
+  bottom: -1px;
+  width: 104%;
+  height: 1px;
+  background: var(--color-accent);
+  transition: left 0.3s ease-out, width 0.3s ease-out;
+  /* transition: background-color 0.3s ease-out; */
+}
+
+.u-borderUnderline--hover:hover {
+  color: var(--color-accent);
+}
+
+.u-borderUnderline--hover:hover:after {
+  /* left: 50%;
+  width: 0%; */
+}
+
+/* .u-borderUnderline--hover:hover:after {
+  left: -2%;
+  width: 104%;
+} */

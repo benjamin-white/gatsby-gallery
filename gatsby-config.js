@@ -10,6 +10,9 @@ module.exports = {
         path: `${__dirname}/src/posts`,
       },
     },
+    {
+      resolve: `gatsby-plugin-react-svg`
+    },
     `gatsby-transformer-remark`
   ]
 }

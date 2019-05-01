@@ -2,3 +2,15 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+.u-siteWrap {
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 0 24px;
+  position: relative;
+  width: 100%;
+  /* @media screen only (max-width: 420px) {
+    padding: 0 ($baseline * .5);
+  } */
+
+}

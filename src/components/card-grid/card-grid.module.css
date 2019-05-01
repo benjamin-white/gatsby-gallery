@@ -1,0 +1,9 @@
+.card-grid > div {
+  display: flex;
+  margin: 0 -12px 48px;
+}
+
+.card-grid-column {
+  flex-grow: 1;
+  width: 0;
+}

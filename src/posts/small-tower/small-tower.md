@@ -1,6 +1,6 @@
 ---
 title: "Small Tower"
-date: "2017-08-10"
+date: "2017-08-12"
 slug: "small-tower"
 featuredImage: "./preview.jpg"
 attachments:

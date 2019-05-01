@@ -1,21 +1,28 @@
-import CardImage from '../components/card-image/card-image'
-import Layout from '../components/layout/layout'
-import React from 'react'
+// import CardImage from '../components/card-image/card-image'
+import HeroText    from '../components/hero-text/hero-text'
+import CardGrid    from '../components/card-grid/card-grid'
+import Layout      from '../components/layout/layout'
+import React       from 'react'
 import { graphql } from 'gatsby'
 
 export default ({ data }) => {
 
+  const cardsData = data.allMarkdownRemark.edges.map(node => ({
+            imageSrc: node.node.frontmatter.featuredImage.publicURL,
+            title: node.node.frontmatter.title,
+            linkTo: node.node.frontmatter.slug
+          }))
+
+  const heroBlurb =
+    <p>
+      <h2>Aesthetic explorations and experiments, mostly created with <a href="https://www.sidefx.com/" class="u-borderUnderline u-borderUnderline--hover" target="_blank" rel="noopener">Houdini</a> &amp; <a href="https://www.blender.org/" class="u-borderUnderline u-borderUnderline--hover" target="_blank" rel="noopener">Blender</a>.
+      </h2>
+    </p>
+
   return (
     <Layout>
-      <h2>{data.allMarkdownRemark.totalCount} Posts</h2>
-      <p>This is some general page text stuff</p>
-      <div className="card-grid">
-        {data.allMarkdownRemark.edges.map(node => ({
-          imageSrc: node.node.frontmatter.featuredImage.publicURL,
-          title: node.node.frontmatter.title,
-          linkTo: 'http://overthere.yeah'
-        })).map(data => CardImage(data))}
-      </div>
+      {HeroText({ textContent: heroBlurb })}
+      <CardGrid cardsData={cardsData} />
     </Layout>
   )
 
@@ -34,6 +41,7 @@ export const query = graphql`
           frontmatter {
             title
             date
+            slug
             featuredImage {
               publicURL
             }

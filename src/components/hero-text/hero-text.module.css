@@ -1,0 +1,27 @@
+.hero-text {
+  text-align: center;
+}
+
+.hero-text div {
+  padding: 48px calc(100% / 6);
+}
+
+.hero-text a {
+  transition: color 0.3s ease-out;
+}
+
+/* .hero-text a:hover {
+  color: var(--color-font);
+} */
+
+.hero-text *:last-of-type {
+  margin: 0;
+}
+
+@media (max-width: 1000px) {
+
+  .hero-text div {
+    padding: 48px 0;
+  }
+
+}

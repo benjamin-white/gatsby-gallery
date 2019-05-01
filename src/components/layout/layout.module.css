@@ -1,3 +1,10 @@
+.page-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
 .pageBody {
-  margin-top: 60px;
+  margin-top: 34px;
 }

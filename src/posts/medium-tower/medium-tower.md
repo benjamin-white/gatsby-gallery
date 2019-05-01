@@ -1,5 +1,5 @@
 ---
-title: "Medium Tower"
+title: "MEDIUM TOWER"
 date: "2017-08-10"
 slug: "medium-tower"
 featuredImage: "./preview.jpg"

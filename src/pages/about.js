@@ -1,6 +1,12 @@
 import React from 'react'
+import Layout      from '../components/layout/layout'
 
-export default () =>
-(
-  <span>oh hai</span>  
-)
+export default () => {
+
+  return (
+    <Layout>
+    This is the about page
+    </Layout>
+  )
+
+}

@@ -3,13 +3,54 @@
   color: #fff;
   position: fixed;
   top: 0;
+  transition: opacity 0.4s ease-out;
   width: 100%;
   z-index: 999;
+}
+
+.site-header:hover {
+  opacity: 1;
+}
+
+.site-header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.site-header-nav a {
+  margin-right: 12px;
+}
+
+.site-header-nav a:hover {
+  color: var(--color-accent);
+}
+
+.site-header-nav a:last-of-type {
+  margin-right: 0;
+}
+
+.site-header-nav span {
+  margin-right: 12px;
+}
+
+.logo-wrap {
+  height: 18px;
+  width: 35px;
+}
+
+.logo-wrap path {
+  fill: #fff;
+  transition: fill 0.3s ease-in;
+}
+
+.logo-wrap:hover path {
+  fill: var(--color-accent);
 }
 
 .u-inner {
   align-items: center;
   display: flex;
+  height: 34px;
   justify-content: space-between;
   padding: 6px 24px;
 }
