@@ -19,21 +19,11 @@ export default class CardGrid extends React.Component {
 
   }
 
-  getColumns() {
+  columnGroups() {
 
     const colCount = this.getColCount();
     const columns  = Array(colCount).fill('').map(x => []);
-
-    // this.props.cardsData.push(this.props.cardsData[0]);
-
-    this.props.cardsData.forEach((card, index) => {
-
-      const colIndex = index % colCount;
-      // Array.isArray(columns[colIndex]) || (columns[colIndex] = [])
-      columns[colIndex].push(card)
-
-    });
-
+    this.props.cardsData.forEach((card, index) =>  columns[index % colCount].push(card));
     return columns;
 
   }
@@ -47,8 +37,8 @@ export default class CardGrid extends React.Component {
     return (
       <section className={styles.cardGrid+' u-siteWrap'}>
         <div>
-        {this.getColumns().map((column, index) => {
-          return <div className={styles.cardGridColumn}>{column.map(CardImage)}</div>
+        {this.columnGroups().map((column, index) => {
+          return <div className={styles.cardGridColumn} key={index}>{column.map(CardImage)}</div>
         })}
 
         </div>

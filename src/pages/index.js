@@ -10,14 +10,13 @@ export default ({ data }) => {
   const cardsData = data.allMarkdownRemark.edges.map(node => ({
             imageSrc: node.node.frontmatter.featuredImage.publicURL,
             title: node.node.frontmatter.title,
-            linkTo: node.node.frontmatter.slug
+            linkTo: '/'+node.node.frontmatter.slug
           }))
 
   const heroBlurb =
-    <p>
-      <h2>Aesthetic explorations and experiments, mostly created with <a href="https://www.sidefx.com/" class="u-borderUnderline u-borderUnderline--hover" target="_blank" rel="noopener">Houdini</a> &amp; <a href="https://www.blender.org/" class="u-borderUnderline u-borderUnderline--hover" target="_blank" rel="noopener">Blender</a>.
-      </h2>
-    </p>
+    <h2>
+      Aesthetic explorations and experiments, mostly created with <a href="https://www.sidefx.com/" className="u-borderUnderline u-borderUnderline--hover" target="_blank" rel="noopener noreferrer">Houdini</a> &amp; <a href="https://www.blender.org/" className="u-borderUnderline u-borderUnderline--hover" target="_blank" rel="noopener noreferrer">Blender</a>.
+    </h2>
 
   return (
     <Layout>
