@@ -1,8 +1,0 @@
-<svg width="10" height="10" style="display:none" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-
-  <filter id="fe-noise">
-    <feTurbulence baseFrequency="0.1 0.1" result="NOISE" numOctaves="24" type="fractalNoise"></feTurbulence>
-    <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="20" xChannelSelector="R" yChannelSelector="R"></feDisplacementMap>
-  </filter>
-
-</svg>

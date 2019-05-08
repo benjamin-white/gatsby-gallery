@@ -9,12 +9,18 @@ import { faTwitter,
 
 export default () => {
 
+  const socialLinks = [
+    {href: 'https://www.behance.net/nvlnvl', icon: faBehance},
+    {href: 'https://www.instagram.com/ben_nvlnvl/', icon: faInstagram},
+    {href: 'https://github.com/benjamin-white', icon: faGithub},
+    {href: 'https://twitter.com/ben_nvlnvl', icon: faTwitter}
+  ];
+
   return (
     <>
-      <a href="https://twitter.com" className={styles.socialIcons}><FontAwesomeIcon icon={faBehance} /></a>
-      <a href="https://twitter.com" className={styles.socialIcons}><FontAwesomeIcon icon={faInstagram} /></a>
-      <a href="https://twitter.com" className={styles.socialIcons}><FontAwesomeIcon icon={faGithub} /></a>
-      <a href="https://twitter.com/ben_nvlnvl" className={styles.socialIcons}><FontAwesomeIcon icon={faTwitter} /></a>
+      {socialLinks.map(link => (
+        <a href={link.href} className={styles.socialIcons} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={link.icon} /></a>
+      ))}
     </>
   )
 
