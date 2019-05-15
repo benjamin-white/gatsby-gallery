@@ -6,7 +6,7 @@ export default props => {
   return (
     <section className={styles.heroText+' u-siteWrap'}>
       <div>
-        {props.textContent}
+        <h1>{props.textContent}</h1>
       </div>
     </section>
   )

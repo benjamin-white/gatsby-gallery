@@ -13,7 +13,7 @@ export default ({ data, pageContext }) => {
   return (
     <Layout>
       <section>
-        <HeroText textContent={<h2>{postData.title}</h2>} />
+        <HeroText textContent={postData.title} />
         <div className={styles.postBody + ' u-siteWrap'}>
           {postData.attachments.map(a => <img src={a.publicURL} />)}
         </div>

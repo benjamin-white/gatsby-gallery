@@ -13,10 +13,9 @@ export default ({ data }) => {
             linkTo: '/'+node.node.frontmatter.slug
           }))
 
-  const heroBlurb =
-    <h2>
-      Aesthetic explorations and experiments, mostly created with <a href="https://www.sidefx.com/" className="u-borderUnderline u-borderUnderline--hover" target="_blank" rel="noopener noreferrer">Houdini</a> &amp; <a href="https://www.blender.org/" className="u-borderUnderline u-borderUnderline--hover" target="_blank" rel="noopener noreferrer">Blender</a>.
-    </h2>
+  const heroBlurb = <>
+    Aesthetic explorations and experiments, mostly created with <a href="https://www.sidefx.com/" className="u-borderUnderline u-borderUnderline--hover" target="_blank" rel="noopener noreferrer">Houdini</a> &amp; <a href="https://www.blender.org/" className="u-borderUnderline u-borderUnderline--hover" target="_blank" rel="noopener noreferrer">Blender</a>.
+  </>
 
   return (
     <Layout>
@@ -30,6 +29,7 @@ export default ({ data }) => {
 export const query = graphql`
   query {
     allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex : "\/posts/" } }
       sort: { order: DESC, fields: [frontmatter___date] }
       limit: 1000
     ) {
