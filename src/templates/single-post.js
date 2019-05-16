@@ -12,7 +12,7 @@ export default ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <section>
+      <section style={{position: 'relative'}}>
         <HeroText textContent={postData.title} />
         <div className={styles.postBody + ' u-siteWrap'}>
           {postData.attachments.map(a => <img src={a.publicURL} />)}

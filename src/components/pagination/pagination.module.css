@@ -1,0 +1,17 @@
+.pagination {
+  position: fixed;
+  top: 50%;
+}
+
+.pagination-left {
+
+}
+
+.pagination-right {
+  right: 0;
+}
+
+.pagination-disabled {
+  cursor: default;
+  opacity: 0.2;
+}
